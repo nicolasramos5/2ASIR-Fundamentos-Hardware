@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paisaje</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #87ceeb;
+    }
+
+    .paisaje {
+        width: 800px;
+        height: 500px;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(#70c5ff 60%, #b0e57c 60%);
+        border: 5px solid white;
+        border-radius: 15px;
+    }
+
+    .sol {
+        position: absolute;
+        top: 40px;
+        right: 100px;
+        width: 90px;
+        height: 90px;
+        background: yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 40px orange;
+    }
+
+    .montana {
+        position: absolute;
+        bottom: 180px;
+        width: 0;
+        height: 0;
+        border-left: 180px solid transparent;
+        border-right: 180px solid transparent;
+        border-bottom: 250px solid #599b65;
+    }
+
+    .m1 {
+        left: -80px;
+    }
+
+    .m2 {
+        right: -50px;
+        border-bottom-color: #478653;
+    }
+
+    .casa {
+        position: absolute;
+        bottom: 110px;
+        left: 300px;
+        width: 200px;
+        height: 150px;
+        background: #f4c27a;
+    }
+
+    .techo {
+        position: absolute;
+        top: -100px;
+        left: -25px;
+        width: 0;
+        height: 0;
+        border-left: 125px solid transparent;
+        border-right: 125px solid transparent;
+        border-bottom: 100px solid #a83232;
+    }
+
+    .puerta {
+        position: absolute;
+        bottom: 0;
+        left: 75px;
+        width: 50px;
+        height: 85px;
+        background: #80421c;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .ventana {
+        position: absolute;
+        top: 30px;
+        width: 40px;
+        height: 40px;
+        background: #8de4ff;
+        border: 4px solid white;
+    }
+
+    .v1 { left: 20px; }
+    .v2 { right: 20px; }
+
+    .arbol {
+        position: absolute;
+        bottom: 110px;
+        width: 30px;
+        height: 100px;
+        background: #754321;
+    }
+
+    .arbol::before {
+        content: "";
+        position: absolute;
+        top: -65px;
+        left: -35px;
+        width: 100px;
+        height: 100px;
+        background: #278b38;
+        border-radius: 50%;
+    }
+
+    .a1 { left: 150px; }
+    .a2 { right: 140px; }
+
+    .nube {
+        position: absolute;
+        top: 100px;
+        left: 120px;
+        width: 100px;
+        height: 35px;
+        background: white;
+        border-radius: 30px;
+    }
+
+    .nube::before {
+        content: "";
+        position: absolute;
+        top: -25px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        background: white;
+        border-radius: 50%;
+    }
+</style>
+</head>
+<body>
+
+<div class="paisaje">
+    <div class="sol"></div>
+
+    <div class="nube"></div>
+
+    <div class="montana m1"></div>
+    <div class="montana m2"></div>
+
+    <div class="arbol a1"></div>
+    <div class="arbol a2"></div>
+
+    <div class="casa">
+        <div class="techo"></div>
+        <div class="ventana v1"></div>
+        <div class="ventana v2"></div>
+        <div class="puerta"></div>
+    </div>
+</div>
+
+</body>
+</html>
